@@ -16,21 +16,21 @@ Plataforma para registrar operaciones de logística, comercio y servicios, gesti
 
 **Tecnologías:** React, TypeScript, Node.js, NestJS y PostgreSQL.
 
-[Código fuente](https://github.com/idrovodario16/nexuscore-platform) · [Demo web](https://nexuscore-idrovodario16-demo.brownlyric131.chatgpt.site/)
+[Código fuente](https://github.com/idrovodario16/nexuscore-platform) · [Demo web](https://idrovodario16.github.io/nexuscore-platform/)
 
 ### NexusInsight · Análisis de operaciones
 
 Plataforma para importar datos operativos, consultar indicadores, aplicar filtros y exportar resultados a CSV. Controla eventos duplicados y revisiones antiguas para mantener consistente el modelo analítico. Puede trabajar con la muestra incluida o con otra fuente compatible, sin depender de NexusCore.
 
-**Tecnologías:** React, TypeScript, Python, FastAPI, PostgreSQL y SQL analítico.
+**Tecnologías:** React, JavaScript, Python, FastAPI, PostgreSQL y SQL analítico.
 
-[Código fuente](https://github.com/idrovodario16/nexusinsight-analytics) · [Demo web](https://nexusinsight-idrovodario16-demo.brownlyric131.chatgpt.site/)
+[Código fuente](https://github.com/idrovodario16/nexusinsight-analytics) · [Demo web](https://idrovodario16.github.io/nexusinsight-analytics/)
 
 ### Independientes e integrables
 
-Cada producto tiene su propio repositorio, API y base de datos. **NexusCore gestiona las operaciones; NexusInsight las convierte en indicadores.** Se integran mediante un contrato de eventos versionado: intercambio manual de JSON entre las demos o un relay HTTP entre las APIs, con reintentos y deduplicación.
+Cada producto tiene su propio repositorio, API y base de datos. Para probarlos juntos en Pages: crea una operación en Core, avanza su estado, descarga **Exportar eventos** e importa el JSON con **Importar eventos** en Insight. Reimportar el mismo lote no duplica las operaciones. El intercambio entre demos es manual; los cambios posteriores requieren otra exportación e importación. **NexusCore gestiona las operaciones; NexusInsight las convierte en indicadores.** Se integran mediante un contrato de eventos versionado: intercambio manual de JSON entre las demos o un relay HTTP entre las APIs, con reintentos y deduplicación.
 
-[Arquitectura, contratos y guía de integración](https://github.com/idrovodario16/nexus-architecture)
+[Guía web de integración](https://idrovodario16.github.io/nexus-architecture/) · [Arquitectura y contratos](https://github.com/idrovodario16/nexus-architecture)
 
 **Estado actual:** ambos son MVP de portafolio con código público. Las demos usan datos ficticios y almacenamiento en el navegador; las APIs y la integración HTTP se ejecutan por separado en un entorno local. Las interfaces todavía no están conectadas a esas APIs. La conexión UI/API, la identidad OIDC/RBAC y la analítica predictiva forman parte de la evolución pendiente.
 
@@ -47,7 +47,7 @@ Cada producto tiene su propio repositorio, API y base de datos. **NexusCore gest
 | Proyecto | Lenguajes y frameworks | Base de datos o almacenamiento | Arquitectura |
 | --- | --- | --- | --- |
 | NexusCore | TypeScript/JavaScript, React, Node.js y NestJS | PostgreSQL en API; localStorage en demo | Monolito modular por capas y outbox transaccional; API independiente. |
-| NexusInsight | Python/FastAPI, TypeScript/JavaScript y React | PostgreSQL en API; localStorage en demo | Ingesta modular, inbox de deduplicación y modelo analítico con SQL. |
+| NexusInsight | Python/FastAPI, JavaScript y React | PostgreSQL en API; localStorage en demo | Ingesta modular, inbox de deduplicación y modelo analítico con SQL. |
 | Nexus Architecture | JavaScript/Node.js, JSON Schema y OpenAPI | Sin base propia; cada producto conserva su PostgreSQL | Contratos y relay HTTP con checkpoint y reintentos; documentación C4. |
 | CargoFlow | HTML, CSS y JavaScript | localStorage; sin base de servidor | Aplicación estática de navegador, sin backend. |
 | Mis finanzas | TypeScript, React, Tailwind CSS y Vinext | Cloudflare D1 (SQLite) y Drizzle ORM | Aplicación full stack con rutas API, validación Zod y Cloudflare Workers. |
