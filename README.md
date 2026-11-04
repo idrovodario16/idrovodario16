@@ -38,9 +38,9 @@ Cada producto tiene su propio repositorio, API y base de datos. **NexusCore gest
 
 | Proyecto | Aporte principal | Alcance actual |
 | --- | --- | --- |
-| [CargoFlow](https://github.com/idrovodario16/cargoflow) | Flujos configurables, inspecciones y seguimiento de estados para distintos sectores. | Código público; prototipo con datos ficticios y persistencia en el navegador. |
-| [Mis finanzas](https://github.com/idrovodario16/mis-finanzas) | Registro de ingresos, gastos y metas de ahorro con dashboard mensual. | Código público; aplicación personal cuyo despliegue original requiere autenticación. Los ahorros se separan del saldo disponible. |
-| [Cookies Privacy Analyzer](https://github.com/idrovodario16/cookies-dashboard) | Análisis descriptivo de metadatos de cookies, filtros y exportación de reportes. | Herramienta educativa local en Python/Flask y SQLite, con demo ficticia; sin descifrado de valores ni acceso automático a perfiles. |
+| [CargoFlow](https://github.com/idrovodario16/cargoflow) | Flujos configurables, inspecciones y seguimiento de estados para distintos sectores. | [Demo pública](https://idrovodario16.github.io/cargoflow/); prototipo con datos ficticios y persistencia en el navegador. |
+| [Mis finanzas](https://github.com/idrovodario16/mis-finanzas) | Registro de ingresos, gastos y metas de ahorro con dashboard mensual. | [Demo pública](https://idrovodario16.github.io/mis-finanzas/) con datos ficticios y localStorage; aplicación original con autenticación y D1. Los ahorros se separan del saldo disponible. |
+| [Cookies Privacy Analyzer](https://github.com/idrovodario16/cookies-dashboard) | Análisis descriptivo de metadatos de cookies, filtros y exportación de reportes. | [Demo pública](https://idrovodario16.github.io/cookies-dashboard/) con filtros y reportes ficticios; el análisis SQLite se ejecuta localmente con Python/Flask. |
 
 ## Resumen técnico por proyecto
 
