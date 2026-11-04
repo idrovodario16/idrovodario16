@@ -4,39 +4,63 @@
 
 # Hola, soy Darío Idrovo
 
-**Ingeniero en Tecnologías de la Información · Desarrollo web y soporte TI**
+**Ingeniero en Tecnologías de la Información · Desarrollador Full Stack y Analista de Datos**
 
-Me interesa transformar necesidades de negocio en herramientas claras y útiles. Combino el desarrollo de aplicaciones con experiencia en soporte técnico, configuración de equipos y redes. Mi objetivo es construir soluciones que sean fáciles de usar, mantener y ampliar.
+Transformo necesidades de negocio en aplicaciones e información útil para tomar decisiones. Mi portafolio combina desarrollo web, APIs, bases de datos y análisis descriptivo, junto con experiencia en soporte técnico, configuración de equipos y redes. Busco construir soluciones claras, mantenibles y con un alcance bien documentado.
 
-### En qué trabajo
+## Proyectos destacados
 
-- Desarrollo de aplicaciones para registrar, organizar y consultar información.
-- Soporte a usuarios, resolución de incidencias y configuración de equipos.
-- Aprendizaje práctico de administración de servidores Linux y despliegue con Docker.
-- Formación continua en redes, ciberseguridad y servicios cloud.
+### NexusCore · Gestión operativa
 
-### Tecnologías
+Plataforma para registrar operaciones de logística, comercio y servicios, gestionar sus estados y generar eventos para análisis externo. Puede utilizarse sin NexusInsight.
 
-| Área | Herramientas y conocimientos |
-| --- | --- |
-| Desarrollo web | JavaScript, HTML, CSS, React, Angular, Bootstrap |
-| Backend y datos | Node.js, APIs REST, SQL, MySQL |
-| Sistemas y herramientas | Linux, Docker, Git, GitHub, VS Code |
-| Infraestructura | Soporte técnico, configuración de routers y switches, segmentación de redes |
+**Tecnologías:** React, TypeScript, Node.js, NestJS y PostgreSQL.
 
-### Proyectos en desarrollo
+[Código fuente](https://github.com/idrovodario16/nexuscore-platform) · [Demo web](https://nexuscore-idrovodario16-demo.brownlyric131.chatgpt.site/)
 
-| Proyecto | Problema que aborda | Estado |
+### NexusInsight · Análisis de operaciones
+
+Plataforma para importar datos operativos, consultar indicadores, aplicar filtros y exportar resultados a CSV. Controla eventos duplicados y revisiones antiguas para mantener consistente el modelo analítico. Puede trabajar con la muestra incluida o con otra fuente compatible, sin depender de NexusCore.
+
+**Tecnologías:** React, TypeScript, Python, FastAPI, PostgreSQL y SQL analítico.
+
+[Código fuente](https://github.com/idrovodario16/nexusinsight-analytics) · [Demo web](https://nexusinsight-idrovodario16-demo.brownlyric131.chatgpt.site/)
+
+### Independientes e integrables
+
+Cada producto tiene su propio repositorio, API y base de datos. **NexusCore gestiona las operaciones; NexusInsight las convierte en indicadores.** Se integran mediante un contrato de eventos versionado: intercambio manual de JSON entre las demos o un relay HTTP entre las APIs, con reintentos y deduplicación.
+
+[Arquitectura, contratos y guía de integración](https://github.com/idrovodario16/nexus-architecture)
+
+**Estado actual:** ambos son MVP de portafolio con código público. Las demos usan datos ficticios y almacenamiento en el navegador; las APIs y la integración HTTP se ejecutan por separado en un entorno local. Las interfaces todavía no están conectadas a esas APIs. La conexión UI/API, la identidad OIDC/RBAC y la analítica predictiva forman parte de la evolución pendiente.
+
+## Otros proyectos
+
+| Proyecto | Aporte principal | Alcance actual |
 | --- | --- | --- |
-| **CargoFlow** | Registro de inspecciones, configuración de flujos y seguimiento de estados, con una base adaptable a distintos sectores. | Prototipo interactivo con datos ficticios; acceso privado. |
-| **Mis finanzas** | Registro de ingresos, gastos y ahorros, con un dashboard para consultar el balance disponible. | Aplicación de uso personal; acceso privado. |
+| [CargoFlow](https://github.com/idrovodario16/cargoflow) | Flujos configurables, inspecciones y seguimiento de estados para distintos sectores. | Código público; prototipo con datos ficticios y persistencia en el navegador. |
+| [Mis finanzas](https://github.com/idrovodario16/mis-finanzas) | Registro de ingresos, gastos y metas de ahorro con dashboard mensual. | Código público; aplicación personal cuyo despliegue original requiere autenticación. Los ahorros se separan del saldo disponible. |
+| [Cookies Privacy Analyzer](https://github.com/idrovodario16/cookies-dashboard) | Análisis descriptivo de metadatos de cookies, filtros y exportación de reportes. | Herramienta educativa local en Python/Flask y SQLite, con demo ficticia; sin descifrado de valores ni acceso automático a perfiles. |
 
-En **CargoFlow** exploro qué partes de una operación pueden reutilizarse y cuáles requieren configuración específica para cada negocio. En **Mis finanzas**, los ahorros se separan del dinero disponible para que el balance refleje mejor lo que se puede gastar.
+## Tecnologías y conocimientos
 
-### Mi siguiente etapa
+| Área | Herramientas y enfoque |
+| --- | --- |
+| Frontend | JavaScript, TypeScript, HTML, CSS, React, Angular, Bootstrap y Tailwind CSS |
+| Backend | Node.js, NestJS, Python, FastAPI, Flask y APIs REST |
+| Datos y análisis | SQL, PostgreSQL, MySQL y SQLite; validación, agregaciones, indicadores y exportación CSV/JSON |
+| Desarrollo y despliegue | Git, GitHub, VS Code, Docker y GitHub Actions; aprendizaje práctico de Linux |
+| Soporte e infraestructura | Atención a usuarios, resolución de incidencias, configuración de equipos, routers y switches, y segmentación de redes |
 
-Profundizar en **redes e infraestructura**, fortalecer mis conocimientos de **ciberseguridad** y avanzar hacia **cloud**, mientras sigo desarrollando aplicaciones que resuelvan necesidades reales.
+## En qué me enfoco
 
-### Colaboración
+- Desarrollar aplicaciones desde la interfaz hasta la API y la persistencia.
+- Convertir datos operativos en indicadores comprensibles, con reglas y límites explícitos.
+- Documentar contratos, decisiones de arquitectura y pruebas para facilitar el mantenimiento.
+- Continuar mi formación en redes, ciberseguridad y servicios cloud.
 
-Me interesan oportunidades de **desarrollo web junior, soporte TI y sistemas**, así como proyectos donde pueda aportar soluciones y continuar aprendiendo.
+## Colaboración
+
+Me interesan oportunidades de **desarrollo Full Stack junior y análisis de datos**, así como roles de **soporte TI y sistemas** donde pueda aportar mi experiencia y seguir creciendo.
+
+Puedes explorar mis proyectos y su documentación en [mis repositorios](https://github.com/idrovodario16?tab=repositories).
