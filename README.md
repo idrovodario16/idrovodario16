@@ -42,6 +42,17 @@ Cada producto tiene su propio repositorio, API y base de datos. **NexusCore gest
 | [Mis finanzas](https://github.com/idrovodario16/mis-finanzas) | Registro de ingresos, gastos y metas de ahorro con dashboard mensual. | Código público; aplicación personal cuyo despliegue original requiere autenticación. Los ahorros se separan del saldo disponible. |
 | [Cookies Privacy Analyzer](https://github.com/idrovodario16/cookies-dashboard) | Análisis descriptivo de metadatos de cookies, filtros y exportación de reportes. | Herramienta educativa local en Python/Flask y SQLite, con demo ficticia; sin descifrado de valores ni acceso automático a perfiles. |
 
+## Resumen técnico por proyecto
+
+| Proyecto | Lenguajes y frameworks | Base de datos o almacenamiento | Arquitectura |
+| --- | --- | --- | --- |
+| NexusCore | TypeScript/JavaScript, React, Node.js y NestJS | PostgreSQL en API; localStorage en demo | Monolito modular por capas y outbox transaccional; API independiente. |
+| NexusInsight | Python/FastAPI, TypeScript/JavaScript y React | PostgreSQL en API; localStorage en demo | Ingesta modular, inbox de deduplicación y modelo analítico con SQL. |
+| Nexus Architecture | JavaScript/Node.js, JSON Schema y OpenAPI | Sin base propia; cada producto conserva su PostgreSQL | Contratos y relay HTTP con checkpoint y reintentos; documentación C4. |
+| CargoFlow | HTML, CSS y JavaScript | localStorage; sin base de servidor | Aplicación estática de navegador, sin backend. |
+| Mis finanzas | TypeScript, React, Tailwind CSS y Vinext | Cloudflare D1 (SQLite) y Drizzle ORM | Aplicación full stack con rutas API, validación Zod y Cloudflare Workers. |
+| Cookies Privacy Analyzer | Python/Flask, HTML/Jinja, CSS y JavaScript | Lectura de copias SQLite; resultados en memoria | Cliente-servidor local, análisis de metadatos y exportación CSV/JSON. |
+
 ## Tecnologías y conocimientos
 
 | Área | Herramientas y enfoque |
